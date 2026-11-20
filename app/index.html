@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA 6 Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 GTA 6 trophies on PS5: checklist, cited guides, spoiler setting and a three-stage platinum roadmap.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314091f'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23ff5da2' font-family='sans-serif' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide</p>
+    <h1>Leonida Ledger</h1>
+    <p class="subtitle">Every one of the 55 official trophies, with a guide in our own words, cited sources, and a tracker that remembers your progress. No account, no network, no spoilers unless you ask for them.</p>
+  </div>
+  <div class="progress-card" id="progress-card">
+    <p class="big-count"><span id="earned-count">0</span><span class="of"> / 55</span></p>
+    <p class="progress-label" id="progress-label">trophies earned &middot; 0%</p>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    <ul class="grade-counts" id="grade-counts"></ul>
+    <p class="platinum-note">Platinum: <strong>Vice Got a Price!</strong> &mdash; earn the other 54.</p>
+  </div>
+</header>
+
+<section class="controls" aria-label="Filters and progress tools">
+  <div class="control-row">
+    <label class="search-label">Search <input id="search" type="search" placeholder="Trophy name or description&hellip;" autocomplete="off"></label>
+    <label>Kind
+      <select id="kind">
+        <option value="all">All kinds</option>
+        <option value="story">Story</option>
+        <option value="missable">Missable</option>
+        <option value="collectibles">Collectibles</option>
+        <option value="activities">Activities</option>
+        <option value="other">Other</option>
+      </select>
+    </label>
+    <label>Grade
+      <select id="grade">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+  </div>
+  <div class="control-row">
+    <label class="check"><input id="hide-earned" type="checkbox"> Hide earned</label>
+    <label class="check"><input id="missable-only" type="checkbox"> Missable only</label>
+    <label class="check spoiler-check"><input id="spoiler" type="checkbox"> Spoiler-free: hide unearned story trophies</label>
+    <span class="spacer"></span>
+    <button id="export" type="button">Export progress</button>
+    <label class="import-button">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset</button>
+  </div>
+  <p class="controls-hint" id="result-count">Showing 55 of 55 trophies</p>
+</section>
+
+<main class="layout">
+  <section class="checklist-col" aria-label="Trophy checklist">
+    <h2>Checklist</h2>
+    <p class="col-hint">Tick a trophy when it pops. Progress is saved in this browser only. Click any card to read its guide.</p>
+    <div id="cards" class="cards"></div>
+    <p id="empty-state" class="empty-state" hidden>No trophies match these filters. Clear the search or change a filter.</p>
+  </section>
+
+  <aside class="side-col" aria-label="Guide, roadmap and notes">
+    <section class="detail-pane" id="detail" aria-live="polite">
+      <h2>Guide</h2>
+      <div id="detail-body"><p>Select a trophy card to read its guide and sources here.</p></div>
+    </section>
+
+    <section class="missable-callout" id="missable-callout">
+      <h2>Do not miss this one</h2>
+      <p><strong>Positive Mental Attitude</strong> (Bronze) is the only trophy reported as possibly missable. In Chapter 1, after the mission Down to Earth, Lucia suggests meditating on the balcony at Jason&rsquo;s house. Follow her and accept, or the moment may be gone for good.</p>
+      <p class="fine">It is still unconfirmed whether that Chapter 1 meditation is actually required for the trophy. PowerPyx&rsquo;s author did it and then earned the trophy, so doing it is the safe move. Keep a manual save from the start of each chapter.</p>
+      <button id="show-missable" type="button">Show the missable trophy</button>
+    </section>
+
+    <section class="roadmap" id="roadmap">
+      <h2>Platinum roadmap &mdash; about 200 hours</h2>
+      <p class="roadmap-intro">One playthrough is enough, difficulty about 4 out of 10, and cheats disable trophies and saving, so leave cheats off. Three stages, in order:</p>
+      <ol id="roadmap-steps" class="roadmap-steps"></ol>
+      <p class="fine">Roadmap built from the official trophy descriptions and PowerPyx&rsquo;s roadmap: story first, then the 100% checklist, then stranger strands and cleanup. Sources are linked on each trophy&rsquo;s guide.</p>
+    </section>
+
+    <section class="online-note" id="online-note">
+      <h2>Online trophies</h2>
+      <p>There are none. All 55 trophies are offline single-player, so this section is empty on purpose: nothing here needs PlayStation Plus, a connection, or another player. The whole platinum is earnable alone, with the network off.</p>
+    </section>
+
+    <section class="about-note">
+      <h2>About this guide</h2>
+      <p>Names, descriptions and grades are the official PlayStation list as published on Exophase and PSNProfiles. Every guide is written in our own words for this page and cites its sources; where a method is still unconfirmed, the guide says so instead of guessing. No Rockstar artwork is used anywhere on this page.</p>
+    </section>
+  </aside>
+</main>
+
+<footer>
+  <p>Leonida Ledger &mdash; an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this page is not affiliated with Rockstar Games. Works offline from its own files.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
